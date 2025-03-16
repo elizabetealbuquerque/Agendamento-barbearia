@@ -1,0 +1,56 @@
+// cliente.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Cliente } from './cliente.model';
+
+@Injectable({
+    providedIn: 'root'
+})
+export class ClienteService {
+    private baseUrl = 'http://localhost:8080/clientes';
+
+    constructor(private http: HttpClient) { }
+
+    salvarCliente(cliente: Cliente) {
+        return this.http.post<Cliente>(this.baseUrl, cliente);
+    }
+    // ... outros métodos
+}
+
+// servico.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Servico } from './servico.model';
+
+@Injectable({
+    providedIn: 'root'
+})
+export class ServicoService {
+    private baseUrl = 'http://localhost:8080/servicos';
+
+    constructor(private http: HttpClient) { }
+
+    salvarServico(servico: Servico) {
+        return this.http.post<Servico>(this.baseUrl, servico);
+    }
+    // ... outros métodos
+}
+
+// agendamento.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Agendamento } from './agendamento.model';
+
+@Injectable({
+    providedIn: 'root'
+})
+export class AgendamentoService {
+    private baseUrl = 'http://localhost:8080/agendamentos';
+
+    constructor(private http: HttpClient) { }
+
+    salvarAgendamento(agendamento: Agendamento) {
+        return this.http.post<Agendamento>(this.baseUrl, agendamento);
+    }
+    // ... outros métodos
+}
