@@ -1,0 +1,17 @@
+// ClienteRepository.java
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+}
+
+// ServicoRepository.java
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ServicoRepository extends JpaRepository<Servico, Long> {
+}
+
+// AgendamentoRepository.java
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AgendamentoRepository extends JpaRepository<Agendamento, Long> {
+}
