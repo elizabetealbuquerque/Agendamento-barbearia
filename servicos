@@ -1,0 +1,44 @@
+// ClienteService.java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ClienteService {
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    public Cliente salvarCliente(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
+    // ... outros métodos
+}
+
+// ServicoService.java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServicoService {
+    @Autowired
+    private ServicoRepository servicoRepository;
+
+    public Servico salvarServico(Servico servico) {
+        return servicoRepository.save(servico);
+    }
+    // ... outros métodos
+}
+
+// AgendamentoService.java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AgendamentoService {
+    @Autowired
+    private AgendamentoRepository agendamentoRepository;
+
+    public Agendamento salvarAgendamento(Agendamento agendamento) {
+        return agendamentoRepository.save(agendamento);
+    }
+    // ... outros métodos
+}
