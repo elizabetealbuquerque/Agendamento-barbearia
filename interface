@@ -1,0 +1,21 @@
+// cliente.model.ts
+export interface Cliente {
+    id?: number;
+    nome: string;
+    email: string;
+}
+
+// servico.model.ts
+export interface Servico {
+    id?: number;
+    nome: string;
+    preco: number;
+}
+
+// agendamento.model.ts
+export interface Agendamento {
+    id?: number;
+    cliente: Cliente;
+    servico: Servico;
+    dataHora: Date;
+}
